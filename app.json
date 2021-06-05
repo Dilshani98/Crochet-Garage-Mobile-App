@@ -4,7 +4,7 @@
     "slug": "weathe-App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/1200x630wa.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

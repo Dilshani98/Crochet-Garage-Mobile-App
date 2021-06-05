@@ -10,7 +10,7 @@ const [error, seterror] = useState(null)
 
   return (
     <View style={styles.container}>
-      <Text>Heyyyyyy hi dilshani dilThis is my first app</Text>
+      <Text>Crochet Garage</Text>
       <TextInput></TextInput>
       
       <StatusBar style="auto" />

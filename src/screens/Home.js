@@ -3,14 +3,11 @@ import { Text, TextInput, View } from "react-native";
 
 export default function Home() {
   return (
-    <View
-      style={{
-        alignContent: "center",
-        flex: 1,
-      }}
-    >
-      <Text>Home</Text>
-      <TextInput></TextInput>
+    <View style={{width:'70%',alignSelf:"center",paddingTop:250}}>
+      <Text>
+        Welcome to Home page !
+      </Text>
+      
     </View>
   );
 }

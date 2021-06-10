@@ -12,10 +12,12 @@ import {
   FlatList
 } from "react-native";
 import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
+import Home from './src/screens/Home';
 
 export default function App() {
   return(
-    <Login/>
+    <Home/>
   )
   
 }

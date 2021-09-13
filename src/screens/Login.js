@@ -85,7 +85,7 @@ export default function Login() {
               </TouchableOpacity>
               <View style={styles.BottomView}>
                   <Text style={styles.BottomText}>
-                        Don't have an account already?
+                        Don't you have an account already?
                   </Text>
                   <TouchableOpacity style>
                       <Text style={{fontSize:10,color:'blue',fontWeight:"bold"}}>Signup</Text>

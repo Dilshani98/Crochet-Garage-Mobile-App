@@ -88,7 +88,7 @@ export default function Login() {
                         Don't you have an account already?
                   </Text>
                   <TouchableOpacity style>
-                      <Text style={{fontSize:10,color:'blue',fontWeight:"bold"}}>Signup</Text>
+                      <Text style={{fontSize:10,color:'blue',fontWeight:"bold"}}>Signup here</Text>
                   </TouchableOpacity>
               </View>
             </View>

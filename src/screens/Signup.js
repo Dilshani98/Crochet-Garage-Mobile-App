@@ -130,7 +130,7 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   Title: {
-    fontSize: 30,
+    fontSize: 25,
     alignItems: "center",
     textAlign: "center",
     fontWeight: "bold",

@@ -1,0 +1,132 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is the user registration API. It provides restful operations for user data",
+    "version" : "1.0.0",
+    "title" : "Customer API",
+    "contact" : {
+      "name" : "Dilshani Senanayake",
+      "url" : "http://www.pluralsight.com",
+      "email" : "dilshanisuboda@gmail.com"
+    },
+    "license" : {
+      "name" : "Apache '2.0'",
+      "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host" : "run.mocky.io",
+  "basePath" : "/v3/aae2b213-a077-4bdf-8f26-142e79d00819",
+  "schemes" : [ "http", "https" ],
+  "security" : [ {
+    "BasicAuth" : [ ]
+  } ],
+  "paths" : {
+    "/users" : {
+      "get" : {
+        "summary" : "Returns the list of all users",
+        "description" : "This operation provides a view of user data list as json.",
+        "operationId" : "getuserList",
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "search results matched and return",
+            "schema" : {
+              "$ref" : "#/definitions/User"
+            }
+          },
+          "404" : {
+            "description" : "user list is empty."
+          }
+        }
+      }
+    },
+    "/createUser" : {
+      "post" : {
+        "summary" : "adds a new user",
+        "description" : "Add a new user to the system",
+        "operationId" : "addUser",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "text/plain" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "the new user data in JSON format",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/User"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          "405" : {
+            "description" : "Invalid Input"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "BasicAuth" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "User" : {
+      "type" : "object",
+      "properties" : {
+        "userId" : {
+          "type" : "integer"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "userPassword" : {
+          "type" : "string"
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "userType" : {
+          "type" : "object",
+          "properties" : {
+            "userTypeID" : {
+              "type" : "integer"
+            },
+            "userType" : {
+              "type" : "string"
+            },
+            "createdDate" : {
+              "type" : "string",
+              "format" : "date"
+            }
+          }
+        },
+        "userRoles" : {
+          "type" : "object",
+          "properties" : {
+            "userRoleID" : {
+              "type" : "integer"
+            },
+            "userRoles" : {
+              "type" : "string"
+            },
+            "createDate" : {
+              "type" : "string",
+              "format" : "date"
+            }
+          }
+        },
+        "registeredDate" : {
+          "type" : "string",
+          "format" : "date"
+        }
+      }
+    }
+  }
+}
